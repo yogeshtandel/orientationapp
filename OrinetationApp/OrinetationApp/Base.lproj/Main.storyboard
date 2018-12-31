@@ -52,7 +52,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5s-ML-MAz">
-                                <rect key="frame" x="157.5" y="617" width="60" height="30"/>
+                                <rect key="frame" x="305" y="617" width="60" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="DUE-F3-3m6"/>
@@ -62,14 +62,23 @@
                                     <color key="titleColor" white="0.84002363459999996" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckg-ov-oZ7">
+                                <rect key="frame" x="0.0" y="622" width="295" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ckg-ov-oZ7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1mw-1x-sir"/>
                             <constraint firstItem="K6G-h5-U1q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KUX-mR-tX4"/>
                             <constraint firstItem="K6G-h5-U1q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YEf-O2-eJM"/>
                             <constraint firstItem="c5s-ML-MAz" firstAttribute="top" secondItem="K6G-h5-U1q" secondAttribute="bottom" constant="20" id="dLN-kE-qSD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c5s-ML-MAz" secondAttribute="bottom" constant="20" id="f9I-dr-bJt"/>
-                            <constraint firstItem="c5s-ML-MAz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kCe-lg-XkP"/>
+                            <constraint firstItem="c5s-ML-MAz" firstAttribute="leading" secondItem="ckg-ov-oZ7" secondAttribute="trailing" constant="10" id="pKQ-kZ-0aU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c5s-ML-MAz" secondAttribute="trailing" constant="10" id="s4z-jL-Jyk"/>
+                            <constraint firstItem="ckg-ov-oZ7" firstAttribute="centerY" secondItem="c5s-ML-MAz" secondAttribute="centerY" id="v2g-8O-8f8"/>
                             <constraint firstItem="K6G-h5-U1q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zT2-ja-ium"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,6 +86,7 @@
                     <navigationItem key="navigationItem" id="DPX-jy-QIg"/>
                     <connections>
                         <outlet property="btn_Call" destination="c5s-ML-MAz" id="W37-Z8-VyW"/>
+                        <outlet property="deadline_lbl" destination="ckg-ov-oZ7" id="Kbc-6m-rGb"/>
                         <outlet property="myTV" destination="K6G-h5-U1q" id="EeZ-2b-9MC"/>
                     </connections>
                 </viewController>

@@ -16,6 +16,7 @@ struct Menu {
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var deadline_lbl: UILabel!
     
     @IBOutlet weak var myTV: UITableView!
     @IBOutlet weak var btn_Call: UIButton!
@@ -86,6 +87,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         label.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 50).isActive = true
         
         myTV.tableHeaderView?.layoutIfNeeded()
+        
+        
+        
+        
+        let str1 = "16230"
+        let str2 = "63455333"
+        
+        let dateText = NSMutableAttributedString.init(string: "\(str1)\(str2)")
+        dateText.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.bold),
+                                NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.strikethroughStyle: 2],
+                               range: NSMakeRange(0, str1.count))
+        dateText.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 34, weight: UIFont.Weight.thin),
+                                NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.strikethroughStyle: 1],
+                               range: NSMakeRange(str1.count,str2.count))
+        
+        // set the attributed string to the UILabel object
+        deadline_lbl.attributedText = dateText
         
     }
     
